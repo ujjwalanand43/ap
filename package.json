@@ -4,8 +4,8 @@
   "description": "This is backend for asain project",
   "main": "index.js",
   "scripts": {
-    "start-local": "nodemon ./src/index.js",
-    "start": "node ./src/index.js"
+    "start-local": "nodemon ./index.js",
+    "start": "node ./index.js"
   },
   "author": "--Ujjwal-Anand",
   "license": "ISC",

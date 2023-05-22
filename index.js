@@ -10,8 +10,8 @@ app.use(cors({
 
 const bodyParser = require("body-parser");
 const morgan = require('morgan');
-const userRouter  = require('./routers/userRouter');
-require('./db/database');
+const userRouter  = require('./src/routers/userRouter');
+require('./src/db/database');
 
 
 
@@ -23,7 +23,9 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-
+app.get('/hello',(req,res)=>{
+    res.send('Hello')
+})
 app.use(morgan('dev'));
 app.use('/api/v1/user',userRouter)
 app.listen(PORT,() => {

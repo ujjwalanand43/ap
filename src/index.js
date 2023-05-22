@@ -5,7 +5,7 @@ const app = express();
 var cors = require('cors');
 // app.use(cors());
 app.use(cors({
-    origin: "http://localhost:4200"
+    origin: "https://asianpaints.pages.dev/"
 }));
 
 const bodyParser = require("body-parser");

@@ -11,6 +11,7 @@ app.use(cors({
 const bodyParser = require("body-parser");
 const morgan = require('morgan');
 const userRouter  = require('./src/routers/userRouter');
+const imageRouter   = require('./src/routers/routes')
 require('./src/db/database');
 
 
@@ -27,7 +28,8 @@ app.get('/hello',(req,res)=>{
     res.send('Hello')
 })
 app.use(morgan('dev'));
-app.use('/api/v1/user',userRouter)
+app.use('/api/v1/user',userRouter);
+app.use('/api/v1/image',imageRouter);
 app.listen(PORT,() => {
     console.log('Listening to port 4000')
 })
